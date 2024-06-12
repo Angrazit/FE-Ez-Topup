@@ -29,7 +29,7 @@ export function Home() {
     className="h-full"
     >
     <img
-      src="./public/img/bg-1.jpg"
+      src="./public/img/bg-2.jpg"
       alt="image 1"
       className="h-full w-full object-cover rounded-3xl"
       />
@@ -187,7 +187,7 @@ export function Home() {
                   color="gray"
                   className="flex items-center font-normal"
                 >
-                  I agree the
+                  I agree the world
                   <a
                     href="#"
                     className="font-medium transition-colors hover:text-gray-900"
