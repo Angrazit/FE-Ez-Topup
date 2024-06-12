@@ -1,8 +1,8 @@
 export const teamData = [
   {
-    img: "/img/team-1.jpg",
-    name: "Ryan Tompson",
-    position: "Web Developer",
+    img: "/img/1.jpg",
+    name: "Mobile legends",
+    position: "Moonton",
     socials: [
       {
         color: "light-blue",
@@ -19,9 +19,9 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-2.jpg",
-    name: "Romina Hadid",
-    position: "Marketing Specialist",
+    img: "/img/2.png",
+    name: "Honor OF Kings",
+    position: "Tencent",
     socials: [
       {
         color: "light-blue",
@@ -38,9 +38,9 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-3.jpg",
-    name: "Alexa Smith",
-    position: "UI/UX Designer",
+    img: "/img/3.jpg",
+    name: "Valorant",
+    position: "Garena",
     socials: [
       {
         color: "light-blue",
@@ -57,9 +57,9 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-4.png",
-    name: "Jenna Kardi",
-    position: "Founder and CEO",
+    img: "/img/4.jpg",
+    name: "Roblox",
+    position: "Roblox",
     socials: [
       {
         color: "light-blue",

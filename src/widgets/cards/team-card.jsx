@@ -3,23 +3,25 @@ import { Card, Avatar, Typography } from "@material-tailwind/react";
 
 export function TeamCard({ img, name, position, socials }) {
   return (
-    <Card color="transparent" shadow={false} className="text-center">
+    <Card color="transparent" shadow={false} className="group text-center shadow-lg sm:hover:scale-110  hover:scale-105  transform transition duration-300">
       <Avatar
         src={img}
         alt={name}
-        size="xxl"
+        size="xl"
         variant="rounded"
-        className="h-full w-full shadow-lg shadow-gray-500/25"
+        className="h-28 w-full  shadow-gray-500/25 rounded-b-none grayscale group-hover:grayscale-0"
       />
-      <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
+      <div className=" grid grid-cols-2 bg-orange  rounded-b-lg">
+      <Typography variant="h5" color="white" className="text-left  p-5">
         {name}
       </Typography>
       {position && (
-        <Typography className="font-bold text-blue-gray-500">
+        <Typography className="font-bold text-grey text-right p-5">
           {position}
         </Typography>
       )}
-      {socials && <div className="mx-auto mt-5">{socials}</div>}
+      </div>
+      
     </Card>
   );
 }
