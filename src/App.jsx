@@ -8,10 +8,11 @@ function App() {
 
   return (
     <>
-      <Navbar routes={routes} ></Navbar>
-        <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-          
-        </div>
+        <Navbar routes={routes} ></Navbar>
+        {/* <div className="relative flex h-screen content-center items-center justify-center">
+            <div className="absolute top-0 h-full w-full bg-[url('/img/background-2.jpg')] bg-cover bg-center" />
+            <div className="absolute top-0 h-full w-full bg-grey/100 bg-cover bg-center bg-gradient-to-b from-old-blue" />
+        </div> */}
 
       <Routes>
         {routes.map(

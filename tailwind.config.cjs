@@ -8,7 +8,14 @@ module.exports = withMT({
       'grey': '#e5e5e5',
       'orange': '#fca311',
       'old-blue': '#14213d',
-
+    },
+    container: {
+      padding: {
+        
+        lg: '2rem',
+        xl: '4rem',
+        '2xl': '3rem',
+      },
     },
     extend: {},
   },
