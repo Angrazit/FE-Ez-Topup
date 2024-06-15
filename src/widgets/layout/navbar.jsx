@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Navbar as MTNavbar,
   MobileNav,
@@ -10,7 +10,24 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
+
+
 export function Navbar({ brandName, routes, action }) {
+  
+  function activelink(nama = null){
+
+    let classes = ''
+    if (nama === namepage){
+      classes += 'capitalize border-b text-white lg:px-4 lg:pb-2 lg:-mb-2 '
+    }else{
+      classes += 'capitalize text-orange lg:px-4 lg:pb-2 lg:-mb-2'
+    }
+  
+    return classes
+  
+  }
+
+
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -20,30 +37,20 @@ export function Navbar({ brandName, routes, action }) {
     );
   }, []);
 
+  var { pathname } = useLocation();
+  let namepage = pathname.split('/')?.at(1);
+
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className=" flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {routes.map(({ name, path, icon, href, target }) => (
         <Typography
           key={name}
           as="li"
           variant="small"
           color="inherit"
-          className="capitalize"
+          className={activelink(name)}
         >
-          {href ? (
-            <a
-              href={href}
-              target={target}
-              className="flex items-center gap-1 p-1 font-bold"
-            >
-              {icon &&
-                React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
-                })}
-              {name}
-            </a>
-          ) : (
-            <Link
+          <Link
               to={path}
               target={target}
               className="flex items-center gap-1 p-1 font-bold"
@@ -54,18 +61,17 @@ export function Navbar({ brandName, routes, action }) {
                 })}
               {name}
             </Link>
-          )}
         </Typography>
       ))}
     </ul>
   );
 
   return (
-    <MTNavbar className="sticky bg-old-blue top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 " color="transparent"
+    <MTNavbar className="sticky bg-old-blue top-0 z-10  max-w-full rounded-none -my-1 px-4 py-1 lg:px-8 " color="transparent"
   >
-      <div className="container mx-auto flex items-center  text-orange">
+      <div className="container mx-auto flex items-center  text-orange py-1">
         <Link to="/">
-          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
+          <Typography className="mr-4 ml-2  cursor-pointer font-bold">
             {brandName}
           </Typography>
         </Link>
@@ -124,6 +130,7 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
+  
   brandName: "Material Tailwind React",
   action: (
     <a

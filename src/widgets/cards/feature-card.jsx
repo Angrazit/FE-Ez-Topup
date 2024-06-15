@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   Card,
@@ -5,14 +6,15 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import { featuresData, teamData, contactData } from "@/data";
+import { featuresData, flashSaleData, contactData } from "@/data";
 import {  FlashDealCard,  } from "@/widgets/cards";
 
 
 export function FeatureCard({ color, icon, title, description }) {
+
   return (
     <Card className="rounded-lg  shadow-lg shadow-gray-500/10 bg-orange bg-gradient-to-br from-white " >
-      <CardBody className="sm:px-8 text-start">
+      <CardBody className=" sm:px-8 text-start">
         <Typography
                 variant="h2"
                 className=" font-extrabold font-outline-2 tracking-wide -mt-5 text-2xl lg:text-4xl"
@@ -27,8 +29,9 @@ export function FeatureCard({ color, icon, title, description }) {
                   D E A L
                 </span>
               </Typography>
-              <div className="mt-3 sm:grid grid-cols-2 gap-2 flex flex-nowrap sm:gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  overflow-x-auto overflow-hidden  sm:overflow-visible">
-            {teamData.map(({ img, name, position, socials }) => (
+              <div
+              className="px-2 py-3  grid  gap-3  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto whitespace-nowrap snap-x">
+            {flashSaleData.map(({ img, name, position, socials }) => (
               <FlashDealCard
                 key={name}
                 img={img}

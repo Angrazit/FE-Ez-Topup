@@ -1,4 +1,4 @@
-import { Avatar, Typography, Button } from "@material-tailwind/react";
+import { Avatar, Typography, Button, Card } from "@material-tailwind/react";
 import {
   MapPinIcon,
   BriefcaseIcon,
@@ -9,11 +9,21 @@ import { Footer } from "@/widgets/layout";
 export function Profile() {
   return (
     <>
-      <section className="relative block h-[50vh]">
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-105" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+      <section className="relative block h-[500px] mt-10 mb-10">
+      
+      <div className="w-5/5 h-full hidden lg:block">
+        <Card className="mr-10 rounded ">
+          <img
+                  src="/img/Carousel_2.jpg"
+                  alt="image 2"
+                  className="h-[500px] w-full object-cover rounded-r-full"
+                />
+        </Card>
+        </div>
+        {/* <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-105" /> */}
+        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center " />
       </section>
-      <section className="relative bg-white py-16">
+      {/* <section className="relative bg-white py-16">
         <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row justify-between">
@@ -122,8 +132,8 @@ export function Profile() {
 
 
         </div>
-      </section>
-      <div className="bg-white">
+      </section> */}
+      <div className="bg-green-100">
         <Footer />
       </div>
 

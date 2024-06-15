@@ -3,10 +3,10 @@ import { Card, Avatar, Typography } from "@material-tailwind/react";
 
 export function FlashDealCard({ img, name, position, socials }) {
   return (
-    <Card color="transparent" shadow={false} className="bg-old-blue  bg-cover group text-center shadow-lg sm:hover:scale-110  hover:scale-105  transform transition duration-300 whitespace-nowrap">
-      <div className="grid lg:grid-cols-4 sm:grid-cols-5 grid-cols-5 w-60 md:w-auto lg:w-60 items-center ml-2">
+    <Card color="transparent" shadow={false} className="bg-old-blue snap-start bg-cover group text-center shadow-lg sm:hover:scale-105  hover:scale-105  transform transition duration-300 whitespace-nowrap">
+      <div className="grid grid-cols-5  md:w-72 w-60 items-center ml-2">
         <div className="md:ml-1 ">
-        <Card className="md:w-14">
+        <Card className="">
         <Avatar
         src={img}
         alt={name}

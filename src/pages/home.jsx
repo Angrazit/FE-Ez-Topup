@@ -23,13 +23,13 @@ export function Home() {
     <>
     
       <div className=" ">
-        <div className="px-3 bg-gradient-to-t from-white  to-old-blue">
+        <div className="px-3 lg:px-8 bg-gradient-to-t from-white  to-old-blue">
         <div className="container relative mx-auto pt-5 ">
               <div className=" mr-auto ml-auto text-center ">
               <Carousel
                 autoplay loop transition={{ type: "spring" ,duration: 0.4}}
                 autoplayDelay={4000}
-                className="rounded-xl h-[220px] sm:h-[280px] md:h-[360px] lg:h-[440px] xl:h-[500px]"
+                className="rounded-xl h-[210px] sm:h-[280px] md:h-[350px] lg:h-[420px] xl:h-[490px] 2xl:h-[500px]"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                   <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                     {new Array(length).fill("").map((_, i) => (
@@ -78,14 +78,14 @@ export function Home() {
               </div>
         </div>
         </div>
-        <section className="px-3">
+        <section className="px-3 lg:px-8">
               <div className="container mx-auto ">
               <div className="mt-10   ">
                 <div className="flex flex-wrap items-center mb-5">
-                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center  rounded-full text-center ">
+                  <div className="mb-10 sm:mb-6 inline-flex h-12 w-12 items-center justify-center  rounded-full text-center ">
                     <img src="/img/icon-fire.png" className=""></img>
                   </div>
-                <div className="   pl-1 lg:w-5/12 w-9/12">
+                <div className="   pl-1 lg:w-5/12 w-10/12">
                   <Typography
                     variant="h4"
                     className=" font-bold text-orange font-outline-2 tracking-wide "
@@ -93,7 +93,7 @@ export function Home() {
                   >
                     POPULAR SEKARANG!
                   </Typography>
-                  <Typography className="-ml-3  font-normal text-blue-gray-600 ">
+                  <Typography className="-ml-1 sm:-ml-3  font-normal text-blue-gray-600 ">
                   Berikut adalah produk yang sedang populer saat ini.
               </Typography>
                 </div>
@@ -210,7 +210,6 @@ export function Home() {
           <form className="mx-auto w-full mt-12 lg:w-5/12">
             <div className="mb-8 flex gap-8">
               <Input variant="outlined" size="lg" label="Full Name" />
-              <Input variant="outlined" size="lg" label="Email Address" />
             </div>
             <Textarea variant="outlined" size="lg" label="Message" rows={8} />
             <Checkbox

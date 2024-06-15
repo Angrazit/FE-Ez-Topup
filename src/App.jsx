@@ -4,7 +4,7 @@ import routes from "@/routes";
 
 
 function App() {
-  const { pathname } = useLocation();
+  
 
   return (
     <>
@@ -16,8 +16,8 @@ function App() {
 
       <Routes>
         {routes.map(
-          ({ path, element }, key) =>
-            element && <Route key={key} exact path={path} element={element} />
+          ({ path, element ,namepage}, key) =>
+            element && <Route key={key} exact path={path} element={element} namepage={namepage} />
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
