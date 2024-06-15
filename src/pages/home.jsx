@@ -15,7 +15,7 @@ import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard, } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
-import { Carousel } from "@material-tailwind/react";
+
 
 
 export function Home() {
@@ -239,6 +239,7 @@ export function Home() {
       </section>
       <div className="bg-white">
         <Footer />
+      </div>
       </div>
     </>
   );
