@@ -10,7 +10,33 @@ import { featuresData, flashSaleData, contactData } from "@/data";
 import {  FlashDealCard,  } from "@/widgets/cards";
 
 
-export function FeatureCard({ color, icon, title, description }) {
+export function FeatureCard() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    
+    const scrollStep = 300; // Adjust the scroll speed here
+    const scrollInterval = 2000; // Adjust the interval time (in ms) here
+    const resetThreshold = 1;
+
+    const scrollRight = () => {
+      if (scrollContainer) {
+        if (scrollContainer.scrollWidth - scrollContainer.scrollLeft - scrollContainer.clientWidth <= resetThreshold) {
+          scrollContainer.scrollLeft = 0;
+          
+        } else {
+          scrollContainer.scrollLeft += scrollStep;
+          console.log(scrollContainer.scrollWidth - scrollContainer.scrollLeft - scrollContainer.clientWidth);
+        }
+      }
+    };
+
+    const intervalId = setInterval(scrollRight, scrollInterval);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <Card className="rounded-lg  shadow-lg shadow-gray-500/10 bg-orange bg-gradient-to-br from-white " >
@@ -29,8 +55,8 @@ export function FeatureCard({ color, icon, title, description }) {
                   D E A L
                 </span>
               </Typography>
-              <div
-              className="px-2 py-3  grid  gap-3  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto whitespace-nowrap snap-x">
+              <div ref={scrollRef}
+              className="px-2 py-3 scroll-smooth grid  gap-x-4 gap-y-2  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto sm:overflow-x-hidden whitespace-nowrap snap-x">
             {flashSaleData.map(({ img, name, position, socials }) => (
               <FlashDealCard
                 key={name}
