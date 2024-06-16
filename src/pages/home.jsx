@@ -78,7 +78,7 @@ export function Home() {
               </div>
         </div>
         </div>
-        <section className="px-3 lg:px-8">
+        <section className="bg-white px-3 lg:px-8">
               <div className="container mx-auto ">
               <div className="mt-10   ">
                 <div className="flex flex-wrap items-center mb-5">
@@ -96,6 +96,7 @@ export function Home() {
                   <Typography className="-ml-1 sm:-ml-3  font-normal text-blue-gray-600 ">
                   Berikut adalah produk yang sedang populer saat ini.
               </Typography>
+              
                 </div>
               </div>
               <div className=" grid grid-cols-1 gap-10 gap-x-10 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">

@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-        <Navbar routes={routes} ></Navbar>
+        <Navbar routes={routes} >
+          
+        </Navbar>
         {/* <div className="relative flex h-screen content-center items-center justify-center">
             <div className="absolute top-0 h-full w-full bg-[url('/img/background-2.jpg')] bg-cover bg-center" />
             <div className="absolute top-0 h-full w-full bg-grey/100 bg-cover bg-center bg-gradient-to-b from-old-blue" />
