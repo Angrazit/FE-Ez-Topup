@@ -7,7 +7,13 @@ module.exports = withMT({
     "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",],
   theme: {
+    extend: {
+      fontFamily: {
+        mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      },
+    },
     colors: {
+      'discount': '#f32227',
       'grey': '#e5e5e5',
       'orange': '#fca311',
       'old-blue': '#14213d',

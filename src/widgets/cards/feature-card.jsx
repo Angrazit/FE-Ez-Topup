@@ -17,10 +17,12 @@ export function FeatureCard() {
     const [countdown, setCountdown] = useState(0)
     const timerId = useRef()
 
-    // useEffect(() => {
-    //   reset()
-    // }
-    // )
+    useEffect(() => {
+      if(countdown === 0){
+        reset()
+      }     
+      }
+    )
 
     useEffect(() => {
       setCountdown(+hours * 3600 + +minutes * 60 + +seconds)
@@ -35,16 +37,29 @@ export function FeatureCard() {
     const second = countdown % 60
     console.log(countdown)
 
-    // const reset = (): void => {
-    //   setCountdown(0)
-    // }
+    const reset = () => {
+      setCountdown(0)
+      clearInterval(timerId.current)
+    }
 
     return(
-      <span className="ml-5 countdown">
-      <span style={{"--value":hour}}></span>:
-      <span style={{"--value":minute}}></span>:
-      <span style={{"--value":second}}></span>
-      </span>
+            <div className="grid grid-flow-col gap-1 text-center auto-cols-max ">
+          <div className="flex flex-col p-0.5 bg-discount rounded-lg text-white ">
+            <span className="countdown font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
+              <span style={{"--value":hour}}></span>
+            </span>
+          </div> 
+          <div className="flex flex-col p-0.5 bg-discount rounded-lg text-white">
+            <span className="countdown font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
+              <span style={{"--value":minute}}></span>
+            </span>
+          </div> 
+          <div className="flex flex-col p-0.5 bg-discount rounded-lg text-white">
+            <span className="countdown font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
+              <span style={{"--value":second}}></span>
+            </span>
+          </div>
+          </div>
     )
 
   }
@@ -81,26 +96,26 @@ export function FeatureCard() {
     <Card className="rounded-lg  shadow-lg shadow-gray-500/10 bg-orange bg-gradient-to-br from-white " >
       
       <CardBody className=" sm:px-8 text-start">
-              <div className="flex">
+              <div className="flex sm:flex-nowrap flex-wrap justify-between sm:mt-0 ">
               <Typography
                         variant="h2"
-                        className=" font-extrabold font-outline-2 tracking-wide -mt-5 text-2xl lg:text-4xl"
+                        className=" font-extrabold font-outline-2 tracking-wide -mt-3 sm:-mt-5 sm:text-2xl lg:text-4xl text-lg"
                         color="black"
                       >
                         F 
                         <span>
-                          <img src="/img/flash.png" className="h-12 w-10 lg:h-16 lg:w-12 inline-flex mt-4"></img>
+                          <img src="/img/flash.png" className="h-8 w-6  sm:h-12 sm:w-10 lg:h-16 lg:w-12 inline-flex sm:mt-4 mt-2"></img>
                         </span>
                         A S H 
                         <span className="ml-5 lg:ml-8">
                           D E A L
-                        </span>
-                        {CountDown(2,1,62)}
+                        </span>                   
               </Typography>
-                      
-                     
-                      
-              </div>
+              <div className="sm:-mt-1 -mt-2 ml-auto" >
+                {CountDown(3,4,25)}
+              </div>  
+             </div>
+             
             
               <div ref={scrollRef}
               className="px-2 py-3 scroll-smooth grid  gap-x-4 gap-y-2  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto sm:overflow-x-hidden whitespace-nowrap snap-x">
