@@ -44,17 +44,17 @@ export function FeatureCard() {
 
     return(
             <div className="grid grid-flow-col gap-1 text-center auto-cols-max ">
-          <div className="flex flex-col p-0.5 bg-discount rounded-lg text-white ">
-            <span className="countdown font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
+          <div className="flex flex-col p-0.5 bg-black bg-gradient-to-br from-discount from-45% text-white shadow-lg rounded-lg">
+            <span className="countdown  font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
               <span style={{"--value":hour}}></span>
             </span>
           </div> 
-          <div className="flex flex-col p-0.5 bg-discount rounded-lg text-white">
+          <div className="flex flex-col p-0.5 bg-black bg-gradient-to-br from-discount from-45% text-white shadow-lg rounded-lg">
             <span className="countdown font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
               <span style={{"--value":minute}}></span>
             </span>
           </div> 
-          <div className="flex flex-col p-0.5 bg-discount rounded-lg text-white">
+          <div className="flex flex-col p-0.5 bg-black bg-gradient-to-br from-discount from-45% text-white shadow-lg rounded-lg">
             <span className="countdown font-mono text-sm sm:text-xl lg:text-3xl border rounded-lg p-1.5">
               <span style={{"--value":second}}></span>
             </span>
