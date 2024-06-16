@@ -29,7 +29,7 @@ export function Home() {
               <Carousel
                 autoplay loop transition={{ type: "spring" ,duration: 0.4}}
                 autoplayDelay={4000}
-                className="rounded-xl h-[180px] sm:h-[280px] md:h-[350px] lg:h-[420px] xl:h-[490px] 2xl:h-[520px]"
+                className="rounded-xl h-[190px] sm:h-[280px] md:h-[350px] lg:h-[420px] xl:h-[490px] 2xl:h-[520px]"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                   <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                     {new Array(length).fill("").map((_, i) => (
