@@ -112,7 +112,7 @@ export function FeatureCard() {
                         </span>                   
               </Typography>
               <div className="sm:-mt-1 -mt-2 ml-auto" >
-                {CountDown(3,4,25)}
+                {CountDown(1,0,10)}
               </div>  
              </div>
              
