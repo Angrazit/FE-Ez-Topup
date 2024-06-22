@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import {
   Card,
   Carousel,
@@ -13,121 +14,72 @@ import {
 } from "@material-tailwind/react";
 import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
-import { FeatureCard, TeamCard, } from "@/widgets/cards";
-import { featuresData, teamData, contactData } from "@/data";
+import { FeatureCard, TeamCard, PopularCard } from "@/widgets/cards";
+import { featuresData, teamData, contactData, gameData } from "@/data";
 
 
 
 export function Home() {
+  
+
   return (
     <>
     
       <div className=" ">
-        <div className="px-3 lg:px-8 bg-gradient-to-t from-white  to-old-blue">
-        <div className="container relative mx-auto pt-5 ">
-              <div className=" mr-auto ml-auto text-center ">
-              <Carousel
-                autoplay loop transition={{ type: "spring" ,duration: 0.4}}
-                autoplayDelay={4000}
-                className="rounded-xl h-[190px] sm:h-[280px] md:h-[350px] lg:h-[420px] xl:h-[490px] 2xl:h-[520px]"
-                navigation={({ setActiveIndex, activeIndex, length }) => (
-                  <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-                    {new Array(length).fill("").map((_, i) => (
-                      <span
-                        key={i}
-                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                          activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                        }`}
-                        onClick={() => setActiveIndex(i)}
-                      />
-                    ))}
-                  </div>
-                )}
-  <>
-    <div className="bg-biru">
-     <div className="max-w-7xl mx-auto p-4 h-96 md:h-128 lg:h-128">
-  <Carousel
-    loop={true}
-    autoPlay={true}
-    interval={500}
-    className="h-full"
-    >
-    <img
-      src="./public/img/bg-2.jpg"
-      alt="image 1"
-      className="h-full w-full object-cover rounded-3xl"
-      />
-    <img
-      src="./public/img/bg-2.jpg"
-      alt="image 2"
-      className="h-full w-full object-cover rounded-3xl"
-      />
-    <img
-      src="./public/img/bg-3.jpg"
-      alt="image 3"
-      className="h-full w-full object-cover rounded-3xl"
-      />
-    </Carousel>
-  </div>
-</div>
-      <section className="px-4 pb-20 pt-4">
-        <div className="bg-putih">
-         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map(({ color, title, icon, description }) => (
-              <FeatureCard
-                key={title}
-                color={color}
-                title={title}
-                icon={React.createElement(icon, {
-                  className: "w-5 h-5 text-white",
-                })}
-                description={description}
-              />
-            ))}
-          </div>
-          <div className="mt-32 flex flex-wrap items-center">
-            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
-                <FingerPrintIcon className="h-8 w-8 text-white " />
-              </div>
-              <Typography
-                variant="h3"
-                className="mb-3 font-bold"
-                color="blue-gray"
-              >
-                <img
-                  src="/img/Carousel_1.jpg"
-                  alt="image 1"
-                  className="h-full w-full object-cover"
-                />
-                <img
-                  src="/img/Carousel_2.jpg"
-                  alt="image 2"
-                  className="h-full w-full object-cover"
-                />
-                <img
-                  src="/img/Carousel_3.jpg"
-                  alt="image 3"
-                  className="h-full w-full object-cover"
-                />
-              </Carousel>
-              <div className="lg:mt-10 md:mt-8  mt-5">
-              
-                {featuresData.map(({ color, title, icon, description }) => (
-                  <FeatureCard
-                    key={title}
-                    color={color}
-                    title={title}
-                    icon={React.createElement(icon, {
-                      className: "w-5 h-5 text-white",
-                    })}
-                    description={description}
+        <div className="px-3 lg:px-8 bg-gradient-to-b from-old-blue from-5% to-old-white">
+          <div className="container relative mx-auto pt-5 ">
+                <div className=" mr-auto ml-auto text-center ">
+                <Carousel
+                  autoplay loop transition={{ type: "spring" ,duration: 0.4}}
+                  autoplayDelay={4000}
+                  className="rounded-xl h-[190px] sm:h-[280px] md:h-[350px] lg:h-[420px] xl:h-[490px] 2xl:h-[520px] shadow-lg"
+                  navigation={({ setActiveIndex, activeIndex, length }) => (
+                    <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                      {new Array(length).fill("").map((_, i) => (
+                        <span
+                          key={i}
+                          className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                            activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                          }`}
+                          onClick={() => setActiveIndex(i)}
+                        />
+                      ))}
+                    </div>
+                  )}
+                >
+                  <img
+                    src="/img/Carousel_1.jpg"
+                    alt="image 1"
+                    className="h-full w-full object-cover"
                   />
-                ))}
+                  <img
+                    src="/img/Carousel_2.jpg"
+                    alt="image 2"
+                    className="h-full w-full object-cover"
+                  />
+                  <img
+                    src="/img/Carousel_3.jpg"
+                    alt="image 3"
+                    className="h-full w-full object-cover"
+                  />
+                </Carousel>
+                <div className="lg:mt-10 md:mt-8  mt-5">
                 
-              </div>
-              </div>
-        </div>
+                  {featuresData.map(({ color, title, icon, description }) => (
+                    <FeatureCard
+                      key={title}
+                      color={color}
+                      title={title}
+                      icon={React.createElement(icon, {
+                        className: "w-5 h-5 text-white",
+                      })}
+                      description={description}
+                    />
+                  ))}
+                  
+                </div>
+                </div>
+          </div>
         </div>
         <section className="bg-white px-3 lg:px-8">
               <div className="container mx-auto ">
@@ -150,22 +102,14 @@ export function Home() {
               
                 </div>
               </div>
-              <div className=" grid grid-cols-1 gap-10 gap-x-10 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
-                {teamData.map(({ img, name, position, socials }) => (
-                  <TeamCard
-                    key={name}
+              <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
+                {gameData.map(({ id,img, name,developer }) => (
+                  <PopularCard
+                    key={id}
+                    id={id}
                     img={img}
                     name={name}
-                    position={position}
-                    socials={
-                      <div className="flex items-center gap-2">
-                        {socials.map(({ color, name }) => (
-                          <IconButton key={name} color={color} variant="text">
-                            <i className={`fa-brands text-xl fa-${name}`} />
-                          </IconButton>
-                        ))}
-                      </div>
-                    }
+                    developer={developer}                    
                   />
                 ))}
               </div>
@@ -271,7 +215,7 @@ export function Home() {
                   color="gray"
                   className="flex items-center font-normal"
                 >
-                  I agree the world
+                  I agree the
                   <a
                     href="#"
                     className="font-medium transition-colors hover:text-gray-900"
