@@ -2,6 +2,7 @@ export const gameData = [
   {
     id: 1,
     name: "Mobile legends",
+    url:"mobile-legends",
     developer: "Moonton",
     img: "/img/1.jpg",
     desc: [

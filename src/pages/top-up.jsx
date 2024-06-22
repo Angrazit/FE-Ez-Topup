@@ -14,7 +14,7 @@ export function TopUp() {
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
   const { gameName } = useParams(); // Retrieve the gameName parameter from the URL
-  const Game = gameData.find(game => game.name === gameName);
+  const Game = gameData.find(game => game.url === gameName);
   let total,totalDiscount;
 
 
