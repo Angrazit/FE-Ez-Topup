@@ -22,6 +22,7 @@ function App() {
             element && <Route key={key} exact path={path} element={element} namepage={namepage} />
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
+        <Route path="/top-up/*" element={<Navigate to="/home" replace />} />
       </Routes>
     </>
   );

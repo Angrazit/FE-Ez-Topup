@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import axios from 'axios';
 import PropTypes from "prop-types";
 import {
   Card,
@@ -35,7 +36,6 @@ export function FeatureCard() {
     const hour = Math.floor(countdown/3600)
     const minute = Math.floor((countdown % 3600)/60)
     const second = countdown % 60
-    console.log(countdown)
 
     const reset = () => {
       setCountdown(0)
@@ -64,7 +64,16 @@ export function FeatureCard() {
 
   }
   
-
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/games')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+  
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -81,7 +90,6 @@ export function FeatureCard() {
           
         } else {
           scrollContainer.scrollLeft += scrollStep;
-          console.log(scrollContainer.scrollWidth - scrollContainer.scrollLeft - scrollContainer.clientWidth);
         }
       }
     };
@@ -116,9 +124,9 @@ export function FeatureCard() {
               </div>  
              </div>
              
-            
+              <div className="ltr">
               <div ref={scrollRef}
-              className="px-2 py-3 scroll-smooth grid  gap-x-4 gap-y-2  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto sm:overflow-x-hidden whitespace-nowrap snap-x">
+              className="scroll-ps-1 snap-x pl-1 py-3 scroll-smooth grid  gap-x-5 gap-y-2  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto sm:overflow-x-hidden whitespace-nowrap ">
             {flashSaleData.map(({ img, name, position, socials }) => (
               <FlashDealCard
                 key={name}
@@ -128,6 +136,8 @@ export function FeatureCard() {
               />
             ))}
           </div>
+              </div>
+              
       </CardBody>
     </Card>
   );

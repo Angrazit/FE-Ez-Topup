@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 import {
   Navbar as MTNavbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   IconButton,
@@ -18,9 +18,9 @@ export function Navbar({ brandName, routes, action }) {
 
     let classes = ''
     if (nama === namepage){
-      classes += 'capitalize border-b text-white lg:px-4 lg:pb-2 lg:-mb-2 '
+      classes += 'capitalize border-b-2 text-white lg:px-4 lg:pb-2 lg:-mb-2 '
     }else{
-      classes += 'capitalize text-orange lg:px-4 lg:pb-2 lg:-mb-2'
+      classes += 'capitalize text-orange lg:px-4 lg:pb-2 lg:-mb-2 hover:text-white hover:border-b-2'
     }
   
     return classes
@@ -70,10 +70,10 @@ export function Navbar({ brandName, routes, action }) {
   return (
     <MTNavbar className="sticky bg-old-blue top-0 z-10  max-w-full rounded-none -my-1 px-4 py-1 lg:px-8 " color="transparent"
   >
-      <div className="container mx-auto flex items-center  text-orange py-1">
+      <div className="container mx-auto flex items-center  text-orange py-1 pt-1.5">
         <Link to="/">
-          <Typography className="mr-4 ml-2  cursor-pointer font-bold">
-            {brandName}
+          <Typography className=" ml-2  cursor-pointer font-bold">
+            <img src="/img/ez-topup.png" className="w-9"></img>
           </Typography>
         </Link>
         <div className="hidden lg:block lg:pl-10">{navList}</div>
@@ -104,7 +104,7 @@ export function Navbar({ brandName, routes, action }) {
           )}
         </IconButton>
       </div>
-      <MobileNav
+      <Collapse
         open={openNav}
       >
       <div className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900">
@@ -125,7 +125,7 @@ export function Navbar({ brandName, routes, action }) {
         </div>
       </div>
         
-      </MobileNav>
+      </Collapse>
     </MTNavbar>
   );
 }
