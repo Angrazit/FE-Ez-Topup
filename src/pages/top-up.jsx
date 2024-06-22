@@ -12,12 +12,15 @@ import { Footer } from "@/widgets/layout";
 
 export function TopUp() {
   const [selectedPrice, setSelectedPrice] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
   const { gameName } = useParams(); // Retrieve the gameName parameter from the URL
   const Game = gameData.find(game => game.name === gameName);
   let total,totalDiscount;
 
 
-  const handleCardClick = (price,isDiscount,discount) => {
+  const handleCardClick = (price,isDiscount,discount,id) => {
+    setSelectedId(id);
+    
     if(isDiscount){
       totalDiscount = (price * discount)/100;
       total = price - totalDiscount;
@@ -94,7 +97,7 @@ export function TopUp() {
           <div>
           <div className="grid grid-cols-2 gap-2">
                   {topUpData.map(({ id,img, name, price,isDiscount,discount }) => (
-                    <button onClick={() => handleCardClick(price,isDiscount,discount)} type="button" >
+                    <button onClick={() => handleCardClick(price,isDiscount,discount,id)} type="button" >
                     <TopUpCard
                       key={id}
                       id={id}
@@ -102,7 +105,8 @@ export function TopUp() {
                       name={name}
                       price={price}
                       isDiscount={isDiscount}
-                      discount={discount}                  
+                      discount={discount}
+                      selectedId={selectedId}                  
                     />  
                     </button>
                                  
@@ -167,7 +171,7 @@ export function TopUp() {
              <div>
           <div className="grid grid-cols-2 gap-2">
                   {topUpData.map(({ id,img, name, price,isDiscount,discount }) => (
-                    <button onClick={() => handleCardClick(price,isDiscount,discount)} type="button" >
+                    <button onClick={() => handleCardClick(price,isDiscount,discount,id)} type="button" >
                     <TopUpCard
                       key={id}
                       id={id}
@@ -252,47 +256,7 @@ export function TopUp() {
       </div>
       
       
-      <section className="relative bg-white py-16">
-        <div className="relative mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
-          <div className="container mx-auto">
-            
-            <div className="-mt-4 container space-y-2">
-              <div className="flex items-center gap-2">
-                <MapPinIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
-                <Typography className="font-medium text-blue-gray-500">
-                  Los Angeles, California
-                </Typography>
-              </div>
-              <div className="flex items-center gap-2">
-                <BriefcaseIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
-                <Typography className="font-medium text-blue-gray-500">
-                  Solution Manager - Creative Tim Officer
-                </Typography>
-              </div>
-              <div className="flex items-center gap-2">
-                <BuildingLibraryIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
-                <Typography className="font-medium text-blue-gray-500">
-                  University of Computer Science
-                </Typography>
-              </div>
-            </div>
-            <div className="mb-10 py-6">
-              <div className="flex w-full flex-col items-start lg:w-1/2">
-                <Typography className="mb-6 font-normal text-blue-gray-500">
-                  An artist of considerable range, Jenna the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                  performs and records all of his own music, giving it a
-                  warm, intimate feel with a solid groove structure. An
-                  artist of considerable range.
-                </Typography>
-                <Button variant="text">Show more</Button>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </section>
+      
       <div className="bg-white">
         <Footer />
       </div>

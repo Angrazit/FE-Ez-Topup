@@ -4,7 +4,7 @@ export const topUpData = [
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
-    isDiscount: 0,
+    isDiscount: false,
     discount: 0,
     price: 2000,
     
@@ -24,7 +24,7 @@ export const topUpData = [
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
-    isDiscount: 0,
+    isDiscount: false,
     discount: 0,
     price: 2000,
     
@@ -34,7 +34,7 @@ export const topUpData = [
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
-    isDiscount: 0,
+    isDiscount: false,
     discount: 0,
     price: 2000,
     

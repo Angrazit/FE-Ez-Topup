@@ -58,7 +58,7 @@ export function Navbar({ brandName, routes, action }) {
             >
               {icon &&
                 React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
+                  className: "w-[18px] h-[18px] opacity-75",
                 })}
               {name}
             </Link>
@@ -70,9 +70,9 @@ export function Navbar({ brandName, routes, action }) {
   return (
     <MTNavbar className="sticky bg-old-blue top-0 z-10  max-w-full rounded-none -my-1 px-4 py-1 lg:px-8 " color="transparent"
   >
-      <div className="container mx-auto flex items-center  text-orange py-1 pt-1.5">
+      <div className="container mx-auto flex items-center  text-orange  pt-0.5 pb-0.5">
         <Link to="/">
-          <Typography className=" ml-2  cursor-pointer font-bold">
+          <Typography className=" ml-2  cursor-pointer font-bold ">
             <img src="/img/ez-topup.png" className="w-9"></img>
           </Typography>
         </Link>
