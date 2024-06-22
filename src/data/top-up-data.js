@@ -4,8 +4,8 @@ export const topUpData = [
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
-    isDiscount: false,
-    discount: 0,
+    isDiscount: true,
+    discount: 45,
     price: 2000,
     
   },
@@ -24,8 +24,8 @@ export const topUpData = [
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
-    isDiscount: false,
-    discount: 0,
+    isDiscount: true,
+    discount: 5,
     price: 2000,
     
   },
@@ -34,11 +34,42 @@ export const topUpData = [
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
-    isDiscount: false,
-    discount: 0,
+    isDiscount: true,
+    discount: 7.6,
     price: 2000,
     
   },
+  {
+    id: 4,
+    img: "/img/icon-fire.png",
+    gameId: 1,
+    name: "5 diamonds",
+    isDiscount: true,
+    discount: 7.6,
+    price: 2000,
+    
+  },
+  {
+    id: 4,
+    img: "/img/icon-fire.png",
+    gameId: 1,
+    name: "5 diamonds",
+    isDiscount: true,
+    discount: 7.6,
+    price: 2000,
+    
+  },
+  {
+    id: 4,
+    img: "/img/icon-fire.png",
+    gameId: 1,
+    name: "5 diamonds",
+    isDiscount: true,
+    discount: 7.6,
+    price: 2000,
+    
+  },
+  
   
 ];
 

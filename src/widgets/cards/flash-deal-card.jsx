@@ -4,7 +4,7 @@ import { Card, Avatar, Typography } from "@material-tailwind/react";
 export function FlashDealCard({ id,img, name, nominal,discount, socials }) {
   return (
     <Card color="transparent" shadow={false} className=" bg-old-blue snap-start rounded-br-none bg-cover group text-center shadow-lg border border-transparent transform hover:ring hover:ring-red-500 transition duration-300 whitespace-nowrap ">
-      <div className="grid grid-cols-5  md:w-72 w-60 items-center ml-2">
+      <div className="grid grid-cols-5 w-60 md:max-w-72 md:w-72 max-w-60 items-center ml-2">
         <div className="md:ml-1 ">
         <Card className="">
         <Avatar
