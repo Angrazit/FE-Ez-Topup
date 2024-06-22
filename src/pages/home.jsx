@@ -43,6 +43,57 @@ export function Home() {
                     ))}
                   </div>
                 )}
+  <>
+    <div className="bg-biru">
+     <div className="max-w-7xl mx-auto p-4 h-96 md:h-128 lg:h-128">
+  <Carousel
+    loop={true}
+    autoPlay={true}
+    interval={500}
+    className="h-full"
+    >
+    <img
+      src="./public/img/bg-2.jpg"
+      alt="image 1"
+      className="h-full w-full object-cover rounded-3xl"
+      />
+    <img
+      src="./public/img/bg-2.jpg"
+      alt="image 2"
+      className="h-full w-full object-cover rounded-3xl"
+      />
+    <img
+      src="./public/img/bg-3.jpg"
+      alt="image 3"
+      className="h-full w-full object-cover rounded-3xl"
+      />
+    </Carousel>
+  </div>
+</div>
+      <section className="px-4 pb-20 pt-4">
+        <div className="bg-putih">
+         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuresData.map(({ color, title, icon, description }) => (
+              <FeatureCard
+                key={title}
+                color={color}
+                title={title}
+                icon={React.createElement(icon, {
+                  className: "w-5 h-5 text-white",
+                })}
+                description={description}
+              />
+            ))}
+          </div>
+          <div className="mt-32 flex flex-wrap items-center">
+            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
+                <FingerPrintIcon className="h-8 w-8 text-white " />
+              </div>
+              <Typography
+                variant="h3"
+                className="mb-3 font-bold"
+                color="blue-gray"
               >
                 <img
                   src="/img/Carousel_1.jpg"
@@ -220,7 +271,7 @@ export function Home() {
                   color="gray"
                   className="flex items-center font-normal"
                 >
-                  I agree the
+                  I agree the world
                   <a
                     href="#"
                     className="font-medium transition-colors hover:text-gray-900"
