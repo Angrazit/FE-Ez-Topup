@@ -36,7 +36,7 @@ export function TopUp() {
   };
 
   if (!Game) {
-    return <Navigate to="/home" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return (
