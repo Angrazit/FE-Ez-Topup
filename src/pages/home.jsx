@@ -103,13 +103,14 @@ export function Home() {
                 </div>
               </div>
               <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
-                {gameData.map(({ id,img, name,developer }) => (
+                {gameData.map(({ id,img, name,developer,url }) => (
                   <PopularCard
                     key={id}
                     id={id}
                     img={img}
                     name={name}
-                    developer={developer}                    
+                    developer={developer}
+                    url={url}                    
                   />
                 ))}
               </div>

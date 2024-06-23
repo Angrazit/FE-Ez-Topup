@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
 import { TopUpCard, BannerTopUp} from "@/widgets/cards";
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate,useLocation } from 'react-router-dom';
 import { topUpData,metodePembayaranData,gameData } from "@/data";
 import { Avatar, Typography, Button,Card ,Input, IconButton, typography} from "@material-tailwind/react";
 import {
@@ -9,16 +9,38 @@ import {
   BuildingLibraryIcon,
 } from "@heroicons/react/24/solid";
 import { Footer } from "@/widgets/layout";
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 
 export function TopUp() {
   const [selectedPrice, setSelectedPrice] = useState(null);
-  const [selectedId, setSelectedId] = useState(null);
   const { gameName } = useParams(); // Retrieve the gameName parameter from the URL
-  const Game = gameData.find(game => game.name === gameName);
+  const query = useQuery();
+  const Game = gameData.find(game => game.url === gameName);
+  const [effectEnabled, setEffectEnabled] = useState(true);
+  const [selectedId, setSelectedId] = useState(null);
   let total,totalDiscount;
 
+  useEffect(() => {
+    if (effectEnabled){
+      const selectid = query.get('selected');
+    if (selectid) {
+      // Assuming you have a way to map the 'selected' query parameter to the corresponding card data
+      const selectedCard = topUpData.find(card => card.id == selectid);
+      console.log(selectedCard);
+      if (selectedCard) {
+        const { price, isDiscount, discount, id } = selectedCard;
+        handleCardClick(price, isDiscount, discount, id);
+      }
+    }
+    }
+    
+  }, [query]);
 
   const handleCardClick = (price,isDiscount,discount,id) => {
+    setEffectEnabled(false);
     setSelectedId(id);
     
     if(isDiscount){
@@ -179,7 +201,8 @@ export function TopUp() {
                       name={name}
                       price={price}
                       isDiscount={isDiscount}
-                      discount={discount}                  
+                      discount={discount}     
+                      selectedId={selectedId}               
                     />  
                     </button>
                                  

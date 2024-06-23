@@ -74,22 +74,22 @@ Footer.defaultProps = {
     {
       color: "gray",
       name: "twitter",
-      path: "https://www.twitter.com/creativetim",
+      path: "",
     },
     {
       color: "gray",
       name: "youtube",
-      path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      path: "",
     },
     {
       color: "gray",
       name: "instagram",
-      path: "https://www.instagram.com/creativetimofficial/",
+      path: "",
     },
     {
       color: "black",
       name: "github",
-      path: "https://github.com/creativetimofficial/material-tailwind",
+      path: "",
     },
   ],
   menus: [
