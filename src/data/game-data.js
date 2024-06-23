@@ -19,6 +19,7 @@ export const gameData = [
   {
     id: 2,
     name: "Mobile legends",
+    url:"mobile-legends",
     developer: "Moonton",
     img: "/img/1.jpg",
     desc: [
@@ -31,6 +32,7 @@ export const gameData = [
   {
     id: 3,
     name: "Mobile legends",
+    url:"mobile-legends",
     developer: "Moonton",
     img: "/img/1.jpg",
     desc: [
@@ -43,6 +45,7 @@ export const gameData = [
   {
     id: 4,
     name: "Mobile legends",
+    url:"mobile-legends",
     developer: "Moonton",
     img: "/img/1.jpg",
     desc: [

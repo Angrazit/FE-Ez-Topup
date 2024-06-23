@@ -15,6 +15,7 @@ export const flashSaleData = topUpData
       id: data.id,
       name: game.name,
       img: game.img,
+      url: game.url,
       discount: data.discount,
       nominal: data.name,
     };

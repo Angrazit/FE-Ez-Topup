@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
 import { Card, Avatar, Typography } from "@material-tailwind/react";
+import { check } from "prettier";
 
-export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId }) {
+export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId,selectid }) {
   let totalDiscount = 0;
   let total = 0;
   let classplus = '';
 
-  if(id === selectedId){
+  if(id === selectedId){    
     classplus = 'ring ring-orange';
+    
   }
 
   if(isDiscount){
@@ -28,7 +30,7 @@ export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId }
   }).format(price);
 
   return (
-  <Card color="transparent" shadow={false} className={`bg-white hover:ring bg-cover hover:ring-orange  group text-center shadow-lg transform transition duration-300 whitespace-nowrap ${classplus}`}>
+  <Card color="transparent" shadow={false} className={`bg-white overflow-hidden hover:ring bg-cover hover:ring-orange  group text-center shadow-lg transform transition duration-300 whitespace-nowrap ${classplus}`}>
       <div className="grid grid-cols-5  md:w-72 w-60 items-center ml-2 ">
         <div className="md:ml-1 ">
 
@@ -47,6 +49,7 @@ export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId }
           <div className="col-span-3 rounded-b-lg p-2 px-3 flex flex-col max-h-[85px] ">
         <Typography variant="h6" color="black" className="text-left text-base font-extrabold">
           {name}
+          
         </Typography>
         {price && (
           <div>
@@ -76,6 +79,13 @@ export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId }
         
         
       </div>
+      {id === selectedId && (
+        <Card variant="rounded" className="absolute bg-orange -right-1.5 -top-1.5 p-1 pt-1.5 pr-2 overflow-hidden">
+        <i className="fas fa-check text-white text-xs" />
+        </Card>
+      )}
+        
+          
       {/* <div className="absolute -right-6 -bottom-1.5 sm:-right-7 sm:mr-0.5 mr-1 sm:-bottom-2 ">
         <img src="/img/disco.png" className="h-8 w-16 sm:h-10 sm:w-20">
         </img>
@@ -100,6 +110,8 @@ TopUpCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number,
   discount: PropTypes.number,
+  selectedId: PropTypes.number,
+  selectid: PropTypes.number,
   socials: PropTypes.node,
 };
 

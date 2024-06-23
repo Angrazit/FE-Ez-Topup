@@ -64,16 +64,6 @@ export function FeatureCard() {
 
   }
   
-  useEffect(() => {
-    axios.get('http://localhost:8000/api/games')
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-  
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -127,13 +117,15 @@ export function FeatureCard() {
               <div className="ltr">
               <div ref={scrollRef}
               className="scroll-ps-1 snap-x pl-1 py-3 scroll-smooth grid  gap-x-5 gap-y-2  grid-rows-2 grid-flow-col grid-cols-[max-content] overflow-hidden overflow-x-auto sm:overflow-x-hidden whitespace-nowrap ">
-            {flashSaleData.map(({ id,img, name, nominal,discount, socials }) => (
+            {flashSaleData.map(({ id,img, name, nominal,discount,url, socials }) => (
               <FlashDealCard
                 key={id}
+                id={id}
                 img={img}
                 name={name}
                 nominal={nominal}
                 discount={discount}
+                url={url}
               />
             ))}
           </div>
