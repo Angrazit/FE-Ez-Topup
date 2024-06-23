@@ -38,6 +38,12 @@ export const gameData = [
     isPopuler: true,
     developer: "Tencent Games",
     img: "/img/7.jpg",
+    gambar: [
+      {
+        card: "/img/3.jpg",
+        icon: "/img/3.jpg",
+      }
+    ],
     desc: [
       {
         desc: "light-blue",
