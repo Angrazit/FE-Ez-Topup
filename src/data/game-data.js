@@ -24,6 +24,12 @@ export const gameData = [
     isPopuler: true,
     developer: "Garena",
     img: "/img/5.jpg",
+    gambar: [
+      {
+        card: "/img/3.jpg",
+        icon: "/img/3.jpg",
+      }
+    ],
     desc: [
       {
         desc: "light-blue",
