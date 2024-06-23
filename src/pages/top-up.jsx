@@ -193,7 +193,7 @@ export function TopUp() {
             <div className="lg:hidden lg:col-span-2 mt-4 lg:grid-cols-1">
              <div>
           <div className="grid grid-cols-2 gap-2">
-                  {topUpData.map(({ id,img, name, price,isDiscount,discount }) => (
+                  {topup.map(({ id,img, name, price,isDiscount,discount }) => (
                     <button onClick={() => handleCardClick(price,isDiscount,discount,id)} type="button" >
                     <TopUpCard
                       key={id}
