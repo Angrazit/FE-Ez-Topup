@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest    
     defaults:
        run:
-         working-directory: ./server/
+         working-directory: 'FE-Ez-Topup'
     strategy:
       matrix:
        node-version: [18.x]
