@@ -3,6 +3,7 @@ export const gameData = [
     id: 1,
     name: "Mobile legends",
     url:"mobile-legends",
+    isPopuler: true,
     developer: "Moonton",
     img: "/img/1.jpg",
     desc: [
@@ -20,6 +21,7 @@ export const gameData = [
     id: 2,
     name: "Free Fire",
     url:"free-fire",
+    isPopuler: true,
     developer: "Garena",
     img: "/img/5.jpg",
     desc: [
@@ -33,6 +35,7 @@ export const gameData = [
     id: 3,
     name: "Honor Of Kings",
     url:"honor-of-kings",
+    isPopuler: true,
     developer: "Tencent Games",
     img: "/img/7.jpg",
     desc: [
@@ -46,6 +49,7 @@ export const gameData = [
     id: 4,
     name: "Valorant",
     url:"valorant",
+    isPopuler: true,
     developer: "Riot Games",
     img: "/img/3.jpg",
     desc: [

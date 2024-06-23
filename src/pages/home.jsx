@@ -15,7 +15,7 @@ import {
 import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard, PopularCard } from "@/widgets/cards";
-import { featuresData, teamData, contactData, gameData } from "@/data";
+import { featuresData, teamData, contactData, gameData, populerData } from "@/data";
 
 
 
@@ -103,7 +103,7 @@ export function Home() {
                 </div>
               </div>
               <div className=" grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {gameData.map(({ id,img, name,developer,url }) => (
+                {populerData.map(({ id,img, name,developer,url }) => (
                   <PopularCard
                     key={id}
                     id={id}

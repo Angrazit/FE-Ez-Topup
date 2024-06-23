@@ -19,6 +19,7 @@ export function TopUp() {
   const { gameName } = useParams(); // Retrieve the gameName parameter from the URL
   const query = useQuery();
   const Game = gameData.find(game => game.url === gameName);
+  const topup = topUpData.filter(prep => prep.gameId === Game.id);
   const [effectEnabled, setEffectEnabled] = useState(true);
   const [selectedId, setSelectedId] = useState(null);
   let total,totalDiscount;
@@ -118,7 +119,7 @@ export function TopUp() {
         <div className="hidden lg:col-span-2 lg:grid lg:grid-cols-1">
           <div>
           <div className="grid grid-cols-2 gap-2">
-                  {topUpData.map(({ id,img, name, price,isDiscount,discount }) => (
+                  {topup.map(({ id,img, name, price,isDiscount,discount }) => (
                     <button onClick={() => handleCardClick(price,isDiscount,discount,id)} type="button" >
                     <TopUpCard
                       key={id}
