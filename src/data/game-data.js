@@ -53,7 +53,7 @@ export const gameData = [
     gambar: [
       {
         card: "/img/3.jpg",
-        icon: "/img/3.jpg",
+        icon: "/img/2.jpg",
       }
     ],
     desc: [
