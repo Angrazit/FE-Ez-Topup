@@ -38,7 +38,7 @@ export const gameData = [
     ],
     desc: [
       {
-        desc: "light-blue",
+        desc: "Official Distributor",
         color: "orange",
       },
     ],
