@@ -5,7 +5,7 @@ export const topUpData = [
     gameId: 1,
     name: "5 diamonds",
     isDiscount: true,
-    discount: 45,
+    discount: 0,
     price: 2000,
     
   },
@@ -25,7 +25,7 @@ export const topUpData = [
     gameId: 1,
     name: "5 diamonds",
     isDiscount: true,
-    discount: 5,
+    discount: 0,
     price: 2000,
     
   },
@@ -35,42 +35,47 @@ export const topUpData = [
     gameId: 1,
     name: "5 diamonds",
     isDiscount: true,
-    discount: 7.6,
+    discount: 0,
     price: 2000,
     
   },
   {
-    id: 4,
+    id: 5,
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
     isDiscount: true,
-    discount: 7.6,
+    discount: 0,
     price: 2000,
     
   },
   {
-    id: 4,
+    id: 6,
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
     isDiscount: true,
-    discount: 7.6,
+    discount: 0,
     price: 2000,
-    
   },
   {
-    id: 4,
+    id: 7,
     img: "/img/icon-fire.png",
     gameId: 1,
     name: "5 diamonds",
     isDiscount: true,
-    discount: 7.6,
-    price: 2000,
-    
+    discount: 0,
+    price: 2000, 
   },
-  
-  
+  {
+    id: 8,
+    img: "/img/icon-fire.png",
+    gameId: 1,
+    name: "5 diamonds",
+    isDiscount: true,
+    discount: 0,
+    price: 2000,
+  },
 ];
 
 export default topUpData;

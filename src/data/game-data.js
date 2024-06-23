@@ -18,10 +18,10 @@ export const gameData = [
   },
   {
     id: 2,
-    name: "Mobile legends",
-    url:"mobile-legends",
-    developer: "Moonton",
-    img: "/img/1.jpg",
+    name: "Free Fire",
+    url:"free-fire",
+    developer: "Garena",
+    img: "/img/5.jpg",
     desc: [
       {
         desc: "light-blue",
@@ -31,10 +31,10 @@ export const gameData = [
   },
   {
     id: 3,
-    name: "Mobile legends",
-    url:"mobile-legends",
-    developer: "Moonton",
-    img: "/img/1.jpg",
+    name: "Honor Of Kings",
+    url:"honor-of-kings",
+    developer: "Tencent Games",
+    img: "/img/7.jpg",
     desc: [
       {
         desc: "light-blue",
@@ -44,10 +44,10 @@ export const gameData = [
   },
   {
     id: 4,
-    name: "Mobile legends",
-    url:"mobile-legends",
-    developer: "Moonton",
-    img: "/img/1.jpg",
+    name: "Valorant",
+    url:"valorant",
+    developer: "Riot Games",
+    img: "/img/3.jpg",
     desc: [
       {
         desc: "light-blue",
