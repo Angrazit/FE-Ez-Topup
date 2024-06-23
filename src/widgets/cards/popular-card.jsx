@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import { Card, Avatar, Typography } from "@material-tailwind/react";
 
-export function PopularCard({ id,img, name, developer }) {
+export function PopularCard({ id,img, name, developer,url }) {
   console.log(id)
 
   return (
-    <a href={`/top-up/${name}`}>
+    <a href={`/top-up/${url}`}>
       <Card color="transparent" shadow={false} className=" bg-old-blue bg-gradient-to-br hover:bg-orange hover:bg-gradient-to-br from-grey group text-center shadow-lg  hover:scale-105  transform transition duration-300">
       <Avatar
         src={img}

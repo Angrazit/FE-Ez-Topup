@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import { Card, Avatar, Typography } from "@material-tailwind/react";
 
-export function FlashDealCard({ img, name, position, socials }) {
+export function FlashDealCard({ id,img, name, nominal,discount,url, socials }) {
   return (
-    <Card color="transparent" shadow={false} className=" bg-old-blue snap-start rounded-br-none bg-cover group text-center shadow-lg border border-transparent transform hover:ring hover:ring-red-500 transition duration-300 whitespace-nowrap ">
-      <div className="grid grid-cols-5  md:w-72 w-60 items-center ml-2">
+    <a href={`/top-up/${url}?selected=${id}`}>
+      <Card color="transparent" shadow={false} className=" bg-old-blue snap-start rounded-br-none bg-cover group text-center shadow-lg border border-transparent transform hover:ring hover:ring-red-500 transition duration-300 whitespace-nowrap ">
+      <div className="grid grid-cols-5 w-60 md:max-w-72 md:w-72 max-w-60 items-center ml-2">
         <div className="md:ml-1 ">
         <Card className="">
         <Avatar
@@ -18,14 +19,15 @@ export function FlashDealCard({ img, name, position, socials }) {
         </div>
         
         <div className="col-span-3 rounded-b-lg p-2 md:p-4">
+        {name && (
+          <Typography className="font-bold text-grey text-left ">
+            {nominal}
+          </Typography>
+        )}
         <Typography color="white" className="text-left  text-xs">
           {name}
         </Typography>
-        {position && (
-          <Typography className="font-bold text-grey text-left ">
-            {position}
-          </Typography>
-        )}
+        
         </div>
       </div>
       <div className="absolute -right-6 -bottom-1.5 sm:-right-7 sm:mr-0.5 mr-1 sm:-bottom-2 ">
@@ -33,24 +35,28 @@ export function FlashDealCard({ img, name, position, socials }) {
         </img>
       </div>
       <div className="absolute right-0.5 bottom-0.5 sm:right-1 sm:bottom-0 text-white text-xs sm:text-base">
-        70%
+        {discount}%
       </div>
 
       
       
     </Card>
+    </a>
+    
   );
 }
 
 FlashDealCard.defaultProps = {
-  position: "",
+  nominal: "",
   socials: null,
 };
 
 FlashDealCard.propTypes = {
+  id: PropTypes.number,
+  discount: PropTypes.number,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  position: PropTypes.string,
+  nominal: PropTypes.string,
   socials: PropTypes.node,
 };
 
