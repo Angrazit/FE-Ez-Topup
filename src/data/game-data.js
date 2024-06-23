@@ -52,6 +52,11 @@ export const gameData = [
     isPopuler: true,
     developer: "Riot Games",
     img: "/img/3.jpg",
+    gambar: [
+      {
+        card: "/img/3.jpg",
+      }
+    ],
     desc: [
       {
         desc: "light-blue",
