@@ -6,6 +6,12 @@ export const gameData = [
     isPopuler: true,
     developer: "Moonton",
     img: "/img/1.jpg",
+    gambar: [
+      {
+        card: "/img/3.jpg",
+        icon: "/img/3.jpg",
+      }
+    ],
     desc: [
       {
         info: "Customer Service 24/7",
