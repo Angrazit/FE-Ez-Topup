@@ -107,10 +107,10 @@ export function Navbar({ brandName, routes, action }) {
       <Collapse
         open={openNav}
       >
-      <div className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900">
+      <div className="rounded-xl bg-old-blue px-4 pt-2 pb-4 text-blue-gray-900">
       <div className="container mx-auto">
           {navList}
-          <a
+          {/* <a
             href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
             target="_blank"
             className="mb-2 block"
@@ -121,7 +121,7 @@ export function Navbar({ brandName, routes, action }) {
           </a>
           {React.cloneElement(action, {
             className: "w-full block",
-          })}
+          })} */}
         </div>
       </div>
         

@@ -102,7 +102,7 @@ export function Home() {
               
                 </div>
               </div>
-              <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
+              <div className=" grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {gameData.map(({ id,img, name,developer,url }) => (
                   <PopularCard
                     key={id}
@@ -131,7 +131,7 @@ export function Home() {
                   Top up Games
                 </Typography>
               </Button>
-              <Button className="bg-old-blue mr-4" size="sm">
+              {/* <Button className="bg-old-blue mr-4" size="sm">
                 <Typography variant="small" color="white" className="text-left font-medium ">
                   Top up Games
                 </Typography>
@@ -141,11 +141,11 @@ export function Home() {
                   Top up Games
                 </Typography>
               </Button>
-              <Button className="bg-old-blue mr-4" size="sm">
+              <Button type="button" className="bg-old-blue mr-4" size="sm">
                 <Typography variant="small" color="white" className="text-left font-medium ">
                   Top up Games
                 </Typography>
-              </Button>
+              </Button> */}
               
             </div>
             <div className="pt-5 grid grid-cols-1 gap-10 gap-x-10 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">

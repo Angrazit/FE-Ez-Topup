@@ -12,14 +12,14 @@ export function PopularCard({ id,img, name, developer,url }) {
         alt={name}
         size="xl"
         variant="rounded"
-        className="h-28 w-full  shadow-gray-500/25 rounded-b-none grayscale group-hover:grayscale-0"
+        className="xl:h-28 w-full md:h-24 sm:h-20 shadow-gray-500/25 rounded-b-none grayscale group-hover:grayscale-0"
       />
-      <div className=" grid grid-cols-2   rounded-b-lg">
-      <Typography variant="h5" color="white" className="text-left  p-3 px-5">
+      <div className=" grid grid-cols-7   rounded-b-lg">
+      <Typography variant="h5" color="white" className="col-span-4 text-left xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs p-3 px-5">
         {name}
       </Typography>
       {developer && (
-        <Typography className="font-bold text-grey text-right p-3 px-5">
+        <Typography variant="h6" className="col-span-3 font-bold text-grey text-right p-3 text-xs px-5 pt-4">
           {developer}
         </Typography>
       )}

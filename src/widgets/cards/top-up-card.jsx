@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { Card, Avatar, Typography } from "@material-tailwind/react";
-import { check } from "prettier";
 
 export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId,selectid }) {
   let totalDiscount = 0;
