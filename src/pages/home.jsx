@@ -148,7 +148,7 @@ export function Home() {
               </Button> */}
               
             </div>
-            <div className="pt-5 grid grid-cols-1 gap-10 gap-x-10 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
+            {/* <div className="pt-5 grid grid-cols-1 gap-10 gap-x-10 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
             {teamData.map(({ img, name, position, socials }) => (
               <TeamCard
                 key={name}
@@ -166,7 +166,7 @@ export function Home() {
                 }
               />
             ))}
-          </div>
+          </div> */}
 
           </div>
 
