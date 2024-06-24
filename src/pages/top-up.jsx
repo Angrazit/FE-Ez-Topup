@@ -52,7 +52,8 @@ export function TopUp() {
     }
     const formattedPrice = new Intl.NumberFormat('id-ID', {
       style: 'decimal',
-      minimumFractionDigits: 0
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
     }).format(total);
     setSelectedPrice(formattedPrice)
     

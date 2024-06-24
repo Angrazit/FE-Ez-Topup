@@ -20,12 +20,14 @@ export function TopUpCard({ id,img, name, price,isDiscount,discount,selectedId,s
   
   const formattedPrice = new Intl.NumberFormat('id-ID', {
     style: 'decimal',
-    minimumFractionDigits: 0
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
   }).format(total);
 
   const Price = new Intl.NumberFormat('id-ID', {
     style: 'decimal',
-    minimumFractionDigits: 0
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
   }).format(price);
 
   return (
