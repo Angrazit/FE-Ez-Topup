@@ -147,8 +147,6 @@ export const topUpData = [
     name: "88 Diamonds(80 + 8 Bonus)",
     isDiscount: true,
     discount: 2,
-    isDiscount: true,
-    discount: 2,
     price: 23400,
   },
     {
