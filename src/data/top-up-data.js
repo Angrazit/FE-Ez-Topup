@@ -412,7 +412,7 @@ export const topUpData = [
 
 {
   id: 1,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "125 Points",
   isDiscount: false,
@@ -420,7 +420,7 @@ export const topUpData = [
   price: 14250,
 },{
   id: 2,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "420 Points",
   isDiscount: false,
@@ -428,7 +428,7 @@ export const topUpData = [
   price: 47500,
 },{
   id: 3,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "700 Points",
   isDiscount: false,
@@ -436,7 +436,7 @@ export const topUpData = [
   price: 76000,
 },{
   id: 4,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "1375 Points",
   isDiscount: false,
@@ -444,7 +444,7 @@ export const topUpData = [
   price: 142500,
 },{
   id: 5,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "2400 Points",
   isDiscount: true,
@@ -452,7 +452,7 @@ export const topUpData = [
   price: 237500,
 },{
   id: 6,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "4000 Points",
   isDiscount: false,
@@ -460,7 +460,7 @@ export const topUpData = [
   price: 380000,
 },{
   id: 7,
-  img: "/img/vpoint.png",
+  img: "/img/Vpoints.png",
   gameId: 4,
   name: "8150 Points",
   isDiscount: true,
