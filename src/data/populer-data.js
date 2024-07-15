@@ -9,7 +9,7 @@ export const populerData = gameData
       name: data.name,
       url: data.url,
       developer: data.developer,
-      img: data.img,
+      img: data.gambar[0].popular,
       desc: data.desc,
       };
   });

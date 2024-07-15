@@ -8,6 +8,7 @@ export const gameData = [
     img: "/img/1.jpg",
     gambar: [
       {
+        popular: "/img/1.jpg",
         card: "/img/3.jpg",
         icon: "/img/3.jpg",
       }
@@ -31,7 +32,8 @@ export const gameData = [
     developer: "Garena",
     img: "/img/5.jpg",
     gambar: [
-      {
+      {        
+        popular:"/img/5.jpg",
         card: "/img/3.jpg",
         icon: "/img/3.jpg",
       }
@@ -56,6 +58,7 @@ export const gameData = [
     img: "/img/7.jpg",
     gambar: [
       {
+        popular:"/img/7.jpg",
         card: "/img/2.jpg",
         icon: "/img/2.jpg",
       }
@@ -80,6 +83,7 @@ export const gameData = [
     img: "/img/3.jpg",
     gambar: [
       {
+        popular:"/img/3.jpg",
         card: "/img/3.jpg",
         icon: "/img/3.jpg",
       }

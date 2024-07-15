@@ -9,9 +9,9 @@ export function TeamCard({ img, name, position, socials }) {
         alt={name}
         size="xl"
         variant="rounded"
-        className="h-28 w-full  shadow-gray-500/25 rounded-b-none grayscale group-hover:grayscale-0"
+        className="h-full w-full  shadow-gray-500/25 rounded-b-none grayscale group-hover:grayscale-0"
       />
-      <div className=" grid grid-cols-2   rounded-b-lg">
+      {/* <div className=" grid grid-cols-2   rounded-b-lg">
       <Typography variant="h5" color="white" className="text-left  p-5">
         {name}
       </Typography>
@@ -20,7 +20,7 @@ export function TeamCard({ img, name, position, socials }) {
           {position}
         </Typography>
       )}
-      </div>
+      </div> */}
       
     </Card>
   );
