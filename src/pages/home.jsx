@@ -148,22 +148,13 @@ export function Home() {
               </Button> */}
               
             </div>
-            <div className="pt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-5">
-            {teamData.map(({ img, name, position, socials }) => (
+            <div className=" pt-5 pb-5 grid gap-2 gap-y-3 md:gap-3 md:gap-y-4 grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+            {gameData.map(({ img, name,url }) => (
               <TeamCard
                 key={name}
                 img={img}
                 name={name}
-                position={position}
-                socials={
-                  <div className="flex items-center gap-2">
-                    {socials.map(({ color, name }) => (
-                      <IconButton key={name} color={color} variant="text">
-                        <i className={`fa-brands text-xl fa-${name}`} />
-                      </IconButton>
-                    ))}
-                  </div>
-                }
+                url={url}
               />
             ))}
           </div>

@@ -5,7 +5,7 @@ export const gameData = [
     url:"mobile-legends",
     isPopuler: true,
     developer: "Moonton",
-    img: "/img/1.jpg",
+    img: "/img/thumbnail/ml.png",
     gambar: [
       {
         popular: "/img/1.jpg",
@@ -30,7 +30,7 @@ export const gameData = [
     url:"free-fire",
     isPopuler: true,
     developer: "Garena",
-    img: "/img/5.jpg",
+    img: "/img/thumbnail/freefire.png",
     gambar: [
       {        
         popular:"/img/5.jpg",
@@ -55,7 +55,7 @@ export const gameData = [
     url:"honor-of-kings",
     isPopuler: true,
     developer: "Tencent Games",
-    img: "/img/7.jpg",
+    img: "/img/thumbnail/hok.png",
     gambar: [
       {
         popular:"/img/7.jpg",
@@ -80,7 +80,7 @@ export const gameData = [
     url:"valorant",
     isPopuler: true,
     developer: "Riot Games",
-    img: "/img/3.jpg",
+    img: "/img/thumbnail/valo.png",
     gambar: [
       {
         popular:"/img/3.jpg",

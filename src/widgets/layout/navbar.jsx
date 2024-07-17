@@ -42,7 +42,7 @@ export function Navbar({ brandName, routes, action }) {
 
   const navList = (
     <ul className=" flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {routes.map(({ name, path, icon, href, target }) => (
+      {routes.filter(route => route.name).map(({ nameshow,name, path, icon, href, target }) => (
         <Typography
           key={name}
           as="li"
@@ -52,6 +52,7 @@ export function Navbar({ brandName, routes, action }) {
         >
         
           <Link
+              key={name}
               to={path}
               target={target}
               className="flex items-center gap-1 p-1 font-bold"
@@ -60,7 +61,7 @@ export function Navbar({ brandName, routes, action }) {
                 React.createElement(icon, {
                   className: "w-[18px] h-[18px] opacity-75",
                 })}
-              {name}
+              {nameshow}
             </Link>
         </Typography>
       ))}

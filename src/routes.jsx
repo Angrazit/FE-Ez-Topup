@@ -2,15 +2,17 @@ import { Home, Profile, SignIn, SignUp,TopUp } from "@/pages";
 
 export const routes = [
   {
+    nameshow: "beranda",
     name: "home",
     path: "/home",
     element: <Home />,
   },
-  // {
-  //   name: "profile",
-  //   path: "/profile",
-  //   element: <Profile />,
-  // },
+  {
+    nameshow: "lacak pesanan",
+    name: "lacak-pesanan",
+    path: "/lacak-pesanan",
+    element: <Profile />,
+  },
   {
     
     path: "/top-up/:gameName",
